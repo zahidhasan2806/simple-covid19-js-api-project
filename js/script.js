@@ -14,7 +14,7 @@ const updateStatistic = (countries) => {
     const div = document.createElement('div');
     const errorDiv = document.getElementById("error")
     if (countries.message == "Not Found") {
-        errorDiv.innerHTML = `<h4>Please,Input valid country name</h4>`
+        errorDiv.innerHTML = `<h4 class='bg-white d-inline-block p-1 rounded'>Please!Input valid country name</h4>`
     }
     else {
         errorDiv.innerHTML = '';

@@ -7,13 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url(https://www.unicef.org/bangladesh/sites/unicef.org.bangladesh/files/styles/hero_mobile/public/1583952355.1997.jpg?itok=4fv3SXxY);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
 
+        .card-body {
+            background: #f1abab2a;
+        }
+    </style>
 </head>
 
 <body class="bg-dark">
     <section class="container">
         <div class="text-center mt-5">
-            <h1>Covid-19 updates</h1>
+            <h1 class="text-white">Covid-19 updates</h1>
         </div>
 
         <div class="input-group mb-3 mt-5 w-75 mx-auto">
@@ -23,15 +33,7 @@
             <button onclick="loadData()" class="btn btn-outline-danger text-white " type="button"
                 id="button-addon2">Search</button>
         </div>
-        <div>
-            <div class=" d-flex justify-content-center">
-                <div id="error" class=" bg-white  text-danger text-center mt-2 d-inline-block  d-none">
-
-                    <h4>Please,Input valid country name</h4>
-                </div>
-            </div>
-
-        </div>
+        <div id="error" class="text-danger text-center mt-2"></div>
         <div class="container" id="update-stat">
 
         </div>

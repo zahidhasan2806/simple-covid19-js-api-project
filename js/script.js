@@ -14,21 +14,21 @@ const updateStatistic = (countries) => {
     const div = document.createElement('div');
     const errorDiv = document.getElementById("error")
     if (countries.message == "Not Found") {
-        errorDiv.classList.remove('d-none')
+        errorDiv.innerHTML = `<h4>Please,Input valid country name</h4>`
     }
     else {
         errorDiv.innerHTML = '';
         div.innerHTML = `
     
-    <div class="card text-center mx-auto  " style="width: 50rem;" >
+    <div class="card text-center mx-auto " style="width: 35rem;" >
              <div class="card-body">
-                <h4 class=" p-3 mb-2 w-50 mx-auto">Country : <span class="text-danger">${country.Country}</span> </h4>
+                <h5 class=" fw-bold my-3 w-50 mx-auto">Country : ${country.Country} </h5>
           
-                <h4 class=" p-3 mb-2 w-50 mx-auto">Confirmed Cases : <span class="text-danger">${country.Confirmed}</span> </h4>
-                <h4 class=" p-3 mb-2 w-50 mx-auto">Active Cases : <span class="text-danger">${country.Active}</span> </h4>
+                <h5 class=" fw-bold my-3 w-50 mx-auto">Confirmed Cases : ${country.Confirmed} </h5>
+                <h5 class=" fw-bold my-3 w-50 mx-auto">Active Cases : ${country.Active} </h5>
             
-                <h4 class=" p-3 mb-2 w-50 mx-auto">Total Deaths : <span class="text-danger">${country.Deaths}</span> </h4>
-                <h4 class=" p-3 mb-2 w-50 mx-auto">Last Update : <span class="text-danger">${country.Date.slice(0, 10)}</span> </h4>
+                <h5 class=" fw-bold my-3 w-50 mx-auto">Total Deaths : ${country.Deaths} </h5>
+                <h5 class=" fw-bold my-3 w-50 mx-auto">Last Update : ${country.Date.slice(0, 10)} </h5>
             </div>
         </div> `
         upcountriestat.innerHTML = ''
